@@ -14,7 +14,7 @@ export default function App() {
 
     <View style={styles.container}>
 
-      <Text>Hello</Text>
+      <Text>Helloooooo</Text>
 
       <Click/>
 
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
 
     flex: 1,
 
-    backgroundColor: '#fff',
+    backgroundColor: '#fff111',
 
     alignItems: 'center',
 
