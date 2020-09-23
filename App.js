@@ -4,7 +4,7 @@ import { StyleSheet, Text, View} from 'react-native';
 
 
 
-import Click from './src/Click';
+import Click from '/Users/yuzhin/test-reactnative/click.js';
 
 
 
