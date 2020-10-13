@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     flex : 10,
       fontSize: 16,
       textShadowColor: 'ffffff',
-      color : "#123459"
+      color : "#ddd459"
 
     },
 

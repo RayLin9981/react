@@ -8,6 +8,8 @@ import Click from '/Users/yuzhin/test-reactnative/click.js';
 
 import ProductList from './src/product/ProductList.js';
 
+import ProductAdd from './src/product/ProductAdd.js';
+
 export default function App() {
 
   return (
@@ -16,9 +18,9 @@ export default function App() {
 
     <View style={styles.container}>
 
-      <Text>Helloooooo</Text>
+      <Text>Hello</Text>
 
-      <Click count={15}/>
+      <Click count={0}/>
       <ProductList/>
     </View>
 

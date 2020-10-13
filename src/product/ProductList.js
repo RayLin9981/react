@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import {FlatList, View, Text, StatusBar,StyleSheet, TouchableOpacity} from 'react-native';
 import styles from '../style.js';
+import ProductAdd from './ProductAdd.js';
 
 
 
@@ -24,6 +25,13 @@ export default function ProductList() {
   
 
   const [selected, setSelected] = useState(null);
+  const [products, setProducts] = useState([
+
+    {desc:"iPad", price:20000},
+
+    {desc:"iPhone X", price:30000}
+
+    ]);
 
   
 
@@ -35,7 +43,7 @@ export default function ProductList() {
 
     <TouchableOpacity onPress = {()=>setSelected(index)} style={[styles.item, {backgroundColor}]}>
 
-      <Text style={styles.title}>{item.name}</Text>
+      <Text style={styles.title}>{item.desc}</Text>
 
       <Text  style= {styles.item}>{item.price}</Text>
 
@@ -48,7 +56,12 @@ export default function ProductList() {
   };
 
 
+  function update1(newProduct){
 
+    setProducts(oldProducts =>[...oldProducts, newProduct]);
+   // setProducts(newProduct); 會導致所有東西消失？
+
+  }
 
 
  return (
@@ -57,16 +70,16 @@ export default function ProductList() {
 
    <FlatList 
 
-    data={data} 
+    data={products} 
 
     renderItem = {renderItem}
 
-    keyExtractor={item => item.name}
+    keyExtractor={item => item.desc}
 
     >
 
    </FlatList>
-
+<ProductAdd update={update1}/>
    </View>
 
  );
