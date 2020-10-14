@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { Alert, Button,TextInput } from 'react-native';
-export default function Click(abc) {
+export default function Click(props) {
 
 
 
-  const [count, setCount] = useState(abc.count);
-  const [desc,setDesc] = useState(abc.update);
+  const [count, setCount] = useState(props.count);
   let countString = "count:" + count;
 
+const handleClick = () => {setCount(count+1);}
 
-
-  function handleClick() {
+ /* function handleClick() {
     setCount(count + 1);
 
     Alert.alert("count:" + count);
 
-  }
+  }*/
+  
  /* function showCount() {
 
     Alert.alert("count:" + count);
@@ -23,7 +23,7 @@ export default function Click(abc) {
   }
   useEffect(showCount);*/
 
-
+ // useEffect();
 
   return (
 <view>

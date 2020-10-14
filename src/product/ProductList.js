@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import {FlatList, View, Text, StatusBar,StyleSheet, TouchableOpacity} from 'react-native';
 import styles from '../style.js';
 import ProductAdd from './ProductAdd.js';
+import { add } from 'react-native-reanimated';
 
 
 
@@ -10,11 +11,11 @@ import ProductAdd from './ProductAdd.js';
 
 const data =[
 
-  {name:"iPhone 7", price:12000},
+  {desc:"iPhone 7", price:12000},
 
-  {name:"iPhone 8", price:10000},
+  {desc:"iPhone 8", price:10000},
 
-  {name:"iPhone X", price:20000},
+  {desc:"iPhone X", price:20000},
 
 ]
 
@@ -25,18 +26,19 @@ export default function ProductList() {
   
 
   const [selected, setSelected] = useState(null);
-  const [products, setProducts] = useState([
+  const [products, setProducts] = useState([...data,
 
     {desc:"iPad", price:20000},
 
     {desc:"iPhone X", price:30000}
 
     ]);
-
   
 
-  const renderItem = ({ item, index }) => {
-
+  const renderItem = (props) => {
+    const item = props.item;
+    const index = props.index;
+    //const { item, index } = props
     const backgroundColor = index === selected ? "#f9c2ff" : "#ffffff";
 
     return(  
@@ -57,29 +59,36 @@ export default function ProductList() {
 
 
   function update1(newProduct){
-
-    setProducts(oldProducts =>[...oldProducts, newProduct]);
-   // setProducts(newProduct); 會導致所有東西消失？
-
+    //第一種寫法，先將function定義好再呼叫serProducts
+  /*  function a (a){
+      return [...a, newProduct]
+    }setProducts(a)
+    */
+    setProducts(function(oldProducts){
+      console.log("[...oldProudct,newProduct]",[oldProducts,newProduct])
+      console.log("oldProducts",oldProducts)
+            return [...oldProducts, newProduct]
+    })
+//    setProducts(oldProducts => [...oldProducts, newProduct]);
+   // setProducts([...products,newProduct]); 
+  
   }
 
 
  return (
 
    <View style={styles.container}>
-
+<ProductAdd update={update1}/>
    <FlatList 
 
     data={products} 
-
     renderItem = {renderItem}
 
     keyExtractor={item => item.desc}
 
     >
-
    </FlatList>
-<ProductAdd update={update1}/>
+
    </View>
 
  );
