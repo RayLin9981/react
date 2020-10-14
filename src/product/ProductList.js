@@ -59,7 +59,7 @@ export default function ProductList() {
 
 
   function update1(newProduct){
-    //第一種寫法，先將function定義好再呼叫serProducts
+    //第一種寫法，先將function定義好再呼叫setProducts
   /*  function a (a){
       return [...a, newProduct]
     }setProducts(a)
