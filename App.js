@@ -9,6 +9,7 @@ import Click from '/Users/yuzhin/test-reactnative/click.js';
 import ProductList from './src/product/ProductList.js';
 
 import ProductAdd from './src/product/ProductAdd.js';
+import ProductList_pra from './src/product/ProductList_pra.js';
 
 export default function App() {
 
@@ -21,6 +22,7 @@ export default function App() {
     <Text>Hello</Text>
 
       <Click count={0}/>
+      <ProductList_pra></ProductList_pra>
       <ProductList/>
     </View>
 
@@ -36,7 +38,7 @@ const styles = StyleSheet.create({
 
     flex: 1,
 
-    backgroundColor: '#ffffff',
+    backgroundColor: '#FFC1E0',
 
     alignItems: 'center',
 

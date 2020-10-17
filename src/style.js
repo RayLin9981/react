@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
 
       //margin: 'auto',
 
-      flexDirection: 'row',
+      flexDirection: 'column',
 
       marginTop: StatusBar.currentHeight || 0,
 
@@ -20,13 +20,13 @@ const styles = StyleSheet.create({
 
     item: {
 
-      flex: 5,
+      flex: 10,
 
       flexDirection: 'row',
 
       backgroundColor: '#f6ffff',
 
-      padding: 8,
+      padding: 20,
 
       marginVertical: 8,
 
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 
     },
     Addbutton: {
-      
+      flexDirection:'row',
 
 
     }

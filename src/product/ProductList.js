@@ -47,7 +47,7 @@ export default function ProductList() {
 
       <Text style={styles.title}>{item.desc}</Text>
 
-      <Text  style= {styles.item}>{item.price}</Text>
+      <Text style= {styles.item}>{item.price}</Text>
 
       <Text style={styles.item}>/{index}</Text>
 
@@ -80,7 +80,7 @@ export default function ProductList() {
    <View style={styles.container}>
 <ProductAdd update={update1}/>
    <FlatList 
-
+    style={styles.container}
     data={products} 
     renderItem = {renderItem}
 

@@ -8,8 +8,7 @@ export default function Click(props) {
   let countString = "count:" + count;
 
 const handleClick = () => {
-  setCount(count+1);
-
+   setCount(count+1);
 }
 function showCount() {
   Alert.alert("count:" + count);
