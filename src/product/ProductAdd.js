@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 
 import { Button , TextInput, View } from 'react-native';
+import styles from '../style.js';
+
 
 export default function ProductAdd(props) {
 
@@ -20,7 +22,7 @@ export default function ProductAdd(props) {
 
     <View>
 
-    <TextInput placeholder="產品說明" value={desc} onChangeText={text=>setDesc(text)}/>
+    <TextInput style={styles.Addbutton} placeholder="產品說明" value={desc} onChangeText={text=>setDesc(text)}/>
 
     <TextInput placeholder="價格" value={price} onChangeText={text=>setPrice(text)}/>
 

@@ -18,7 +18,7 @@ export default function App() {
 
     <View style={styles.container}>
 
-    <Text>Hello</Text>
+      <Text>Hello</Text>
 
       <Click count={0}/>
       <ProductList/>

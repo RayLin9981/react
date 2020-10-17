@@ -20,11 +20,11 @@ const styles = StyleSheet.create({
 
     item: {
 
-      flex: 1,
+      flex: 5,
 
       flexDirection: 'row',
 
-      backgroundColor: '#66ffff',
+      backgroundColor: '#f6ffff',
 
       padding: 8,
 
@@ -38,11 +38,16 @@ const styles = StyleSheet.create({
 
     title: {
     flex : 10,
-      fontSize: 16,
-      textShadowColor: 'ffffff',
+      fontSize: 20,
+      textShadowColor: '#ffffff',
       color : "#ddd459"
 
     },
+    Addbutton: {
+      
+
+
+    }
 
   
 
