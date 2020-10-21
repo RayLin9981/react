@@ -1,50 +1,37 @@
-import React from 'react';
+let getData = ()=> {
 
-import { StyleSheet, Text, View} from 'react-native';
+  return new Promise((resolve,reject)=> {
 
+    //模擬要花時間取得資料
 
+    setTimeout(
 
-import Click from '/Users/yuzhin/test-reactnative/click.js';
+      //()=>reject('Error')
 
-import ProductList from './src/product/ProductList.js';
+      ()=>resolve([{name:'Ben', age:30},{name:'Mary', age:20}])
 
-import ProductAdd from './src/product/ProductAdd.js';
-import ProductList_pra from './src/product/ProductList_pra.js';
+      , 3000);
 
-export default function App() {
-
-  return (
-  
-
-
-    <View style={styles.container}>
-
-    <Text>Hello</Text>
-
-      <Click count={0}/>
-      <ProductList_pra></ProductList_pra>
-      <ProductList/>
-    </View>
-
-  );
+  });
 
 }
 
 
 
-const styles = StyleSheet.create({
+const getRemoteData = async()=> {
 
-  container: {
+  result = await getData();
 
-    flex: 1,
+  console.log(result);
 
-    backgroundColor: '#FFC1E0',
+}
 
-    alignItems: 'center',
 
-    justifyContent: 'center',
 
-  },
+console.log("start");
 
-});
+result = getRemoteData();
 
+console.log(result);
+
+console.log("end");

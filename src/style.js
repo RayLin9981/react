@@ -47,10 +47,12 @@ const styles = StyleSheet.create({
       flexDirection:'row',
 
 
-    }
+    },
+  pra_button:{
+    flexDirection:'row',
+    backgroundColor : 'red'
 
-  
-
-  });
+  },
+});
 
 export default styles;
